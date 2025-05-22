@@ -1,0 +1,278 @@
+/* Page CSS principale pour toutes les page.
+    Contient les allignements pour l'entête, barre de navigation et les forms.
+     */
+* {
+    font-family: Oxygen, sans-serif;
+}
+
+nav {
+    height: 106px;
+    overflow: hidden;
+    box-shadow: inset 0px -5px 5px -5px #024950;
+    background-color: #6ceeff;
+    margin: 0;
+    padding: 10px;
+    align-content: center;
+}
+
+nav>* {
+    float: left;
+    display: block;
+}
+
+nav>div>img {
+    margin-left: 13px;
+    width: 80px;
+    height: auto;
+}
+
+nav>h1 {
+    margin-top: 13px;
+    margin-bottom: auto;
+    margin-left: 23px;
+    font-size: 44px;
+}
+
+.formNav {
+    float: right;
+    margin-top: 8px;
+}
+
+#formUniteTemp,
+#formuniteLongueur {
+    margin: 0;
+}
+
+aside {
+    width: 15%;
+    min-height: 241px;
+    height: 100%;
+    float: left;
+    box-shadow: inset -5px 0 5px -5px #29627e;
+    margin-left: -8px;
+    color: #29627e;
+    background-color: #003135;
+}
+
+aside>ul {
+    padding: 0;
+}
+
+aside>ul>li {
+    list-style-type: none;
+    margin: 0.5rem;
+}
+
+li>a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 0;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #0fa4af;
+}
+
+li.active {
+    background-color: #0b1a22;
+}
+
+.hamburger-menu {
+    display: none;
+}
+
+button {
+    border: solid 1px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #0fa4af;
+}
+
+#boutonRecharge {
+    margin-top: 10px;
+}
+
+input:hover {
+    cursor: pointer;
+}
+
+form>* {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+body {
+    background-color: #afdde5;
+    margin: 0;
+}
+
+.divFormulaires>*,
+.divFormulaires>form>* {
+    padding-left: 10px;
+}
+
+#contenu {
+    position: absolute;
+}
+
+img {
+    width: 50px;
+    height: auto;
+}
+
+.widget {
+    color: #f0f0f0;
+    display: inline-block;
+    width: 10rem;
+    height: 11rem;
+    margin-left: 10px;
+    padding: 10px;
+    text-align: center;
+    margin-top: 10px;
+    border: #111 1px solid;
+    border-radius: 10px;
+    vertical-align: top;
+    background-color: #0fa4af;
+}
+
+.alert {
+    display: inline-block;
+    position: absolute;
+    margin-left: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    min-width: 300;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.alert-warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+
+.bouton-erreur {
+    margin-top: 80px;
+}
+
+.miseajour {
+    height: 100%;
+    width: calc(100% - 10px);
+    margin-left: 10px;
+}
+
+.miseajour>* {
+    word-wrap: break-word;
+}
+
+/* Lorsque l'interface devient plus petit que 1024px, la barre de navigation se cache. */
+@media (max-width: 1024px) {
+    .formNav {
+        margin: -5px 0 0;
+    }
+
+    nav {
+        height: 80px;
+    }
+
+    nav>div>img {
+        width: 50px;
+        height: auto;
+    }
+
+    nav>h1 {
+        font-size: 24px;
+    }
+
+    aside>ul>li {
+        display: none;
+    }
+
+    aside.active>ul>li {
+        display: block;
+        list-style-type: none;
+        margin: 0.5rem;
+    }
+
+    li>a {
+        display: block;
+        color: #f0f0f0;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    aside {
+        width: 80px;
+        position: relative;
+        left: 80px;
+        z-index: 1000;
+    }
+
+    aside.active {
+        width: 200px;
+    }
+
+    aside.collapse {
+        transform: translateX(-100%);
+    }
+
+    aside.collapse.active {
+        transform: translateX(-80px);
+    }
+
+    .hamburger-menu {
+        margin: 10px auto 0;
+        display: block;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+    }
+
+    .hamburger-menu.active {
+        margin: 10px 10px 0 auto;
+    }
+}
+
+/* Petit changement pour laisser de la place au form dans l'entête. */
+@media (max-width: 475px) {
+    nav {
+        height: 126px;
+    }
+}
+
+/* Importé de Bootstrap pour m'aider à alligner certains éléments. */
+.container {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    height: 100vh;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row>* {
+    flex-shrink: 0;
+}

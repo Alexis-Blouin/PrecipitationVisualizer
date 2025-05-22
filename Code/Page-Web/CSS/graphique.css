@@ -1,0 +1,25 @@
+/* CSS pour la page des graphiques. Permet de placer les graphiques dans des colonnes pour le rendre plus responsive. */
+canvas {
+    width: 100%;
+    max-width: 600px;
+    max-height: 400px;
+    background-color: #f0f0f0;
+    -webkit-box-shadow: 0 0 10px #969696;
+    box-shadow: 0 0 10px #969696;
+}
+
+.canvas {
+    display: grid;
+    grid-template-columns: 0.1fr 0.1fr;
+    justify-items: center;
+    gap: 10px;
+    padding-left: 10px;
+}
+
+@media (max-width: 1500px) {
+    .canvas {
+        grid-template-columns: 1fr;
+        justify-items: baseline;
+        padding-left: 10px;
+    }
+}

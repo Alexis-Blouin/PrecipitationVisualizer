@@ -1,0 +1,12 @@
+const ERREUR_CONN_BD = 'Erreur de connexion à la base de données : ';
+const GRAPH_VIDE = 'Aucune donnée n\'a été récupérée durant cette période.';
+const GRAPH_VIDE_TEMP = 'Aucune donnée de température n\'a été récupérée durant cette période.';
+const GRAPH_VIDE_PRECIP = 'Aucune donnée de précipitation n\'a été récupérée durant cette période.';
+const ERREUR_ORDRE_DATES = 'La date de début ne peut pas être placée après la date de fin (ou vice-versa).';
+const ERREUR_DATE_FUTUR = 'Il est impossible de sélectionner une date future.';
+const ERREUR_INTERVALLE_GRAND = 'L\'intervalle peut faire au maximum 31 jours (1 mois).';
+const TABLEAU_VIDE = 'Aucune donnée n\'a été récupérée durant la journée du : ';
+const TABLEAU_VIDE_TEMP = 'Aucune donnée de température n\'a été récupérée durant la journée du : ';
+const TABLEAU_VIDE_PRECIP = 'Aucune donnée de précipitation n\'a été récupérée durant la journée du : ';
+const PERTE_CONN_ARDUINO = 'Erreur : La connexion à la plateforme a été perdue.';
+const ERREUR_CONN_ARDUINO = 'La connexion avec la plateforme n\'a pas pu être établie.';
